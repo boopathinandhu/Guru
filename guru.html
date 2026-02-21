@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Birthday - Guru Prasath</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: gold;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.page {
+    display: none;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px gold;
+}
+
+p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    background: linear-gradient(45deg, gold, orange);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 15px gold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.photo {
+    width: 300px;
+    border-radius: 20px;
+    border: 5px solid gold;
+    box-shadow: 0 0 30px gold;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <h1>👑 A Royal Day Has Arrived 👑</h1>
+    <p>Today, a king was born... a star who shines brighter every year.</p>
+    <p>His name is Guru Prasath ✨</p>
+    <button onclick="nextPage(2)">Click Here 👑</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>Words for a Future Champion</h1>
+    <p>🌟 Dream big, because you are meant for greatness.</p>
+    <p>🌟 Every year adds wisdom, strength, and courage.</p>
+    <p>🌟 Believe in yourself — the world already does.</p>
+    <p>🌟 Confidence is your crown. Wear it proudly.</p>
+    <p>🌟 Success follows those who never give up.</p>
+    <button onclick="nextPage(3)">Next Surprise ➜</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>Blessings & Wishes</h1>
+    <p>💫 May happiness follow you everywhere.</p>
+    <p>💫 May your smile light up every room.</p>
+    <p>💫 May you grow stronger and wiser each year.</p>
+    <p>💫 May success become your best friend.</p>
+    <p>💫 May your life be filled with achievements and joy.</p>
+    <button onclick="nextPage(4)">Final Surprise 🎁</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page" id="page4">
+    <h1>🎉 HAPPY BIRTHDAY GURU PRASATH 🎉</h1>
+    <p>May your journey be royal, your dreams powerful, and your future golden.</p>
+    <img src="guru.jpg" alt="Guru Prasath" class="photo">
+    <p style="margin-top:20px; font-size:20px;">With love from your family ❤️</p>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+    let pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    document.getElementById('page' + pageNumber).classList.add('active');
+    window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
